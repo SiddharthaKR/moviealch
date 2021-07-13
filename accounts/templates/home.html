@@ -1,0 +1,876 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ALCHER STREAM</title>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+
+
+        <style>
+#inputValue{
+
+font-size: 1.5rem;
+}
+.stroke{
+font-size: 5rem;
+  text-transform: uppercase;
+  color:rgba(0, 0,0, 0.3);
+  /* -webkit-text-fill-color: white; Will override color (regardless of order) */
+  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: rgb(250, 245, 245);
+  text-shadow: 2px 2px 20px rgba(242, 248, 250, 0.2);
+
+}
+
+.navUl{
+  margin-left: auto;
+}
+.navbar-light .navbar-nav .nav-link {
+  color: rgb(255 255 255);
+}
+.navbar{
+  height: 4rem;
+  background-color: none;
+}
+.navbtn{
+width: 81px;
+}
+.d-flex{
+  margin-right: 28rem;
+  width: 100%;
+}
+.search {
+  width: 100%;
+  border: 0;
+  outline: 0;
+  background: transparent;
+  border-bottom: 5px solid rgb(255, 255, 255);
+}
+.nav-item{
+  padding:0 18px;
+}
+
+.head-container{
+   background-image: url(/public/pic/bg.png);
+   height: 38rem;
+   background-repeat: no-repeat;
+
+}
+
+.title{
+   color: white;
+   text-align: center;
+
+}
+.titleDiv{
+   margin: 12% 2%;
+
+}
+.titleDiv h1{
+    font-weight: 900;
+   letter-spacing: 3px;
+  font-size: 5rem;
+  padding: 8px;
+}
+.headBtn{
+  padding: 1rem 4rem;
+}
+.carbtn{
+  background-color: black;
+}
+.slide{
+  padding: 1% 0%;
+  margin-left: 24px;
+}
+.carousel-control-prev-icon{
+  position: relative;
+  right: 56px;
+}
+.carousel-control-next-icon{
+position: relative;
+right: 38px;
+}
+.d{
+margin-left: 8px;
+}
+.badge{
+  background-color: cornsilk;
+  color:black;
+  font-size: 2rem;
+      margin: 15px 34px;
+}
+.btngrp{
+  padding: 0rem 1.5rem;
+}
+.hns{
+  display: none;
+}
+.net{
+  display: block;
+}
+/* CUSTOM STYLE END */
+
+/* WEB STYLE */
+
+.last {
+width: 800px; height: 320px;
+overflow: hidden;
+margin: 100px auto;
+box-shadow: 0 0 10px 1px rgba(0, 0, 0, 0.35);
+}
+
+.accordion ul {
+width: 2000px;
+}
+
+.accordion li {
+position: relative;
+display: block;
+width: 160px;
+float: left;
+border-left: 1px solid #888;
+box-shadow: 0 0 25px 10px rgba(0, 0, 0, 0.5);
+transition: all 0.5s;
+}
+
+.accordion ul:hover li {width: 40px;}
+.accordion ul li:hover {width: 640px;}
+.accordion li img {
+display: block;
+}
+.card-body{
+background-color: #caced2;
+}
+.n  {
+opacity: 1;
+transition: opacity .25s ease-in-out;
+-moz-transition: opacity .25s ease-in-out;
+-webkit-transition: opacity .25s ease-in-out;
+}
+.n:hover {
+opacity: 0.8;
+cursor: pointer;
+}
+.im{
+height: 20rem;
+width: 35rem;
+}
+.scroll{
+width: 6rem;
+}
+.w{
+text-align: center;
+}
+.foot{
+  width: auto;
+  color: white;
+  height: 15rem;
+  background-color: rgb(53, 45, 53);
+  margin-top: 4rem;
+  box-sizing: border-box;
+
+}
+body{
+background-color: #1d1919;
+}
+.fimg{
+  padding: 5rem 30rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  justify-content: space-around;
+}
+.last{
+  text-align: center;
+  font-family: sans-serif;
+  font-size: 22px;
+}
+
+.image_title {
+background: rgba(0, 0, 0, 0.5);
+position: absolute;
+left: 0; bottom: 10px;
+width: 640px;
+
+}
+.image_title a {
+display: block;
+text-align: center;
+color: #fff;
+text-decoration: none;
+padding: 20px;
+}
+
+@keyframes BobbySnuggles {
+0% {
+  opacity: 0;
+  transform: rotate(15deg) scale(0);
+}
+100% {
+  opacity: 1;
+  transform: rotate(0deg) scale(1);
+}
+}
+
+@media screen and (max-width: 500px) {
+nav {
+  background: pink;
+}
+}
+.span-or {
+  display: block;
+  position: absolute;
+  left: 50%;
+  top: -2px;
+  margin-left: -25px;
+  background-color: #fff;
+  width: 50px;
+  text-align: center;
+}
+.hr-or {
+  background-color: #cdcdcd;
+  height: 1px;
+  margin-top: 0px !important;
+  margin-bottom: 0px !important;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+.footer{
+  background-color: #02091a;
+  padding: 70px 0;
+}
+.footer-col{
+ width: 25%;
+ padding: 0 15px;
+}
+.footer-col h4{
+  font-size: 18px;
+  color: #ffffff;
+  text-transform: capitalize;
+  margin-bottom: 35px;
+  font-weight: 500;
+  position: relative;
+}
+.footer-col ul li:not(:last-child){
+  margin-bottom: 10px;
+}
+.footer-col ul li a{
+  font-size: 16px;
+  text-transform: capitalize;
+  color: #ffffff;
+  text-decoration: none;
+  font-weight: 300;
+  color: #bbbbbb;
+  display: block;
+  transition: all 0.3s ease;
+}
+.footer-col ul li a:hover{
+  color: #ffffff;
+  padding-left: 8px;
+}
+.footer-col .social-links a{
+  display: inline-block;
+  height: 40px;
+  width: 40px;
+  background-color: rgba(255,255,255,0.2);
+  margin:0 10px 10px 0;
+  text-align: center;
+  line-height: 40px;
+  border-radius: 50%;
+  color: #ffffff;
+  transition: all 0.5s ease;
+}
+.footer-col .social-links a:hover{
+  color: #24262b;
+  background-color: #ffffff;
+}
+
+@media(max-width: 767px){
+.footer-col{
+  width: 50%;
+  margin-bottom: 30px;
+}
+}
+@media(max-width: 574px){
+.footer-col{
+  width: 100%;
+}
+}
+
+
+
+
+        </style>
+</head>
+
+<body>
+
+    <section class="head-container">
+        <div class="container-fluid title">
+            <!-- NAV BAR -->
+            <nav class="navbar navbar-expand-lg navbar-light ">
+                <div class="container-fluid">
+                    <a class="navbar-brand" href="#"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQiv93UWSfcTCLV7T-frE4z3bACoKED9amdDg&usqp=CAU" alt="" width="160" height="44"></a>
+                    <!-- SEARCH BAR -->
+
+                    <!-- SEARCH BAR END -->
+
+
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false"
+                        aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarNavDropdown">
+
+                        <ul class="navbar-nav navUl">
+                            <li class="nav-item">
+                                <form class="d-flex" method="GET" action="/search" >
+                                    <input class="form-control me-2 search" id="inputValue" name="query" id="query" type="search" placeholder="Search"
+                                        aria-label="Search">
+                                        <input type="submit" class="form-control me-2 search" id="inputValue" style="color: #fff;" aria-label="Search">
+ 
+                                </form>
+                            </li>
+                            {%   if request.user.is_authenticated %}
+                            <li class="nav-item">
+                              <a class="btn btn-light btn-dark navbtn" href="/logout" role="button">Hello ,{{request.user}} Logout</a>
+
+                            </li>
+                            {% else %}
+                            <li class="nav-item">
+                              <a class="btn btn-light btn-dark navbtn" href="/login" role="button">Login</a>
+
+                            </li>
+                            {% endif %}
+                            <li class="nav-item">
+                                <!-- <a class="btn btn-light btn-dark navbtn" href="/login" role="button">Login</a> -->
+                                  <a class="btn btn-light btn-dark navbtn" href="/signup" role="button">Sign up</a>
+
+                            </li>
+
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button"
+                                    data-bs-toggle="dropdown" aria-expanded="false">
+                                    Dropdown link
+                                </a>
+                                <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                                    <li><a class="dropdown-item" href="#">Movies</a></li>
+                                    <li><a class="dropdown-item" href="#">Shows</a></li>
+                                    <li><a class="dropdown-item" href="#">News</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+
+                    </div>
+                </div>
+            </nav>
+            <div class="container-fluid titleDiv">
+                <h1 class="stroke">STREAM ALL THE POPULAR <br> MOVIES ON THE GO</h1>
+                <button id="search" class="btn btn-primary btn-lg headBtn">START HERE</button>
+            </div>
+        </div>
+
+
+    </section>
+    <span class="badge bg-light text-dark">Fan Favourite</span>
+
+
+
+    
+    <div id="carouselExampleControls" class="carousel slide" data-interval="false">
+        <div class="carousel-inner">
+            
+            <div class="carousel-item active container-fluid">
+                
+                <div class="row">
+                    {% for i in s %}
+                    <div class="pricing-column col-lg-4 col-md-6">
+                        <div class="card" style="width: 18rem;">
+                            <img class="card-img-top changeimage n" width="300px" height="400px" src="{{i.image}}" alt="Card image cap">
+                            <div class="card-body">
+                                <p class="card-text moviedes">{{i.name}}Some quick example text to build on the card title and make up the
+                                    bulk of the card's content.</p>
+                                    <form class="" action="/watchlist" method="post">
+                                     <input type="hidden" name="listName"  class="hid" value= "Stranger things"></input>
+                                      <a href="/addwatch/{{i.id}}" class="btn btn-primary wb" id="watchbtn1" value="https://i.pinimg.com/564x/4e/f7/ac/4ef7acad284e02a0243f29dd80f7d868.jpg" name="button">Watchlist <i class="fa fa-star" aria-hidden="true"></i></a>
+                                    </form>
+
+                            </div>
+                        </div>
+                    </div>
+                    {% endfor %}
+                </div>
+                   
+
+                    
+            </div>
+           
+  
+        </div>
+        <button class="carousel-control-prev scroll " type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
+            <span class="carbtn carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+          </button>
+          <button class="carousel-control-next scroll" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
+            <span class="carbtn carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+          </button>
+    </div>
+</div>
+    <section>
+
+    <span class="badge bg-light text-dark">Explore what's streaming</span>
+
+    <div class="container-fluid btngrp">
+<button type="button" onclick="toggle_visibility('netflix','hotstar','prime','voot','netflix')" class="btn d btn-secondary">Netflix</button>
+<button type="button" onclick="toggle_visibility('netflix','hotstar','prime','voot','hotstar')" class="btn btn-secondary">Hotstar</button>
+<button type="button" onclick="toggle_visibility('netflix','hotstar','prime','voot','prime')" class="btn btn-secondary">amazon prime</button>
+<button type="button" onclick="toggle_visibility('netflix','hotstar','prime','voot','voot')" class="btn btn-secondary">Voot</button>
+</div>
+
+
+
+    <div id="netflix" class="carousel slide net"  data-interval="false">
+        <div class="carousel-inner">
+            <div class="carousel-item container-fluid">
+                <div class="row">
+
+                    <div class="pricing-column col-lg-4 col-md-6">
+                        <div class="card" style="width: 18rem;">
+                            <img class="card-img-top n" width="300px" height="400px" src="https://assets1.ignimgs.com/2017/10/23/stranger-things-ver26-xlg-1508774232839.jpg" alt="Card image cap">
+                            <div class="card-body">
+                                <p class="card-text">Some quick example text to build on the card title and make up the
+                                    bulk of the card's content.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="pricing-column col-lg-4 col-md-6">
+                        <div class="card" style="width: 18rem;">
+                            <img class="card-img-top n" width="300px" height="400px" src="https://m.media-amazon.com/images/M/MV5BOTk2NzUyOTctZDdlMS00MDJlLTgzNTEtNzQzYjFhNjA0YjBjXkEyXkFqcGdeQXVyMjg1NDcxNDE@._V1_.jpg" alt="Card image cap">
+                            <div class="card-body">
+                                <p class="card-text">Some quick example text to build on the card title and make up the
+                                    bulk of the card's content.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="pricing-column col-lg-4">
+                        <div class="card" style="width: 18rem;">
+                            <img class="card-img-top n" width="300px" height="400px" src="https://m.media-amazon.com/images/M/MV5BZDcxOGI0MDYtNTc5NS00NDUzLWFkOTItNDIxZjI0OTllNTljXkEyXkFqcGdeQXVyMTMxODk2OTU@._V1_.jpg" alt="Card image cap">
+                            <div class="card-body">
+                                <p class="card-text">Some quick example text to build on the card title and make up the
+                                    bulk of the card's content.</p>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+            <div class="carousel-item active container-fluid">
+                <div class="row">
+
+                    <div class="pricing-column col-lg-4 col-md-6">
+                        <div class="card" style="width: 18rem;">
+                            <img class="card-img-top n" width="300px" height="400px" src="https://images.theconversation.com/files/168754/original/file-20170510-28069-qwy9ri.jpg?ixlib=rb-1.1.0&q=45&auto=format&w=1200&h=1200.0&fit=crop" alt="Card image cap">
+                            <div class="card-body">
+                                <p class="card-text">Some quick example text to build on the card title and make up the
+                                    bulk of the card's content.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="pricing-column col-lg-4 col-md-6">
+                        <div class="card" style="width: 18rem;">
+                            <img class="card-img-top n" width="300px" height="400px" src="https://www.denofgeek.com/wp-content/uploads/2018/04/the-flash-season-5-release-date-news-villain-story.jpg?fit=1200%2C900" alt="Card image cap">
+                            <div class="card-body">
+                                <p class="card-text">Some quick example text to build on the card title and make up the
+                                    bulk of the card's content.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="pricing-column col-lg-4">
+                        <div class="card" style="width: 18rem;">
+                            <img class="card-img-top n" width="300px" height="400px" src="https://timesofindia.indiatimes.com/thumb/msid-81759086,width-1200,height-900,resizemode-4/.jpg" alt="Card image cap">
+                            <div class="card-body">
+                                <p class="card-text">Some quick example text to build on the card title and make up the
+                                    bulk of the card's content.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <button class="carousel-control-prev " type="button" data-bs-target="#netflix" data-bs-slide="prev">
+            <span class="carbtn carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+          </button>
+          <button class="carousel-control-next " type="button" data-bs-target="#netflix" data-bs-slide="next">
+            <span class="carbtn carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+          </button>
+    </div>
+</div>
+</section>
+<section>
+
+
+
+
+    <div id="hotstar" class="carousel slide hns"  data-interval="false">
+        <div class="carousel-inner">
+            <div class="carousel-item container-fluid">
+                <div class="row">
+
+                    <div class="pricing-column col-lg-4 col-md-6">
+                        <div class="card" style="width: 18rem;">
+                            <img class="card-img-top n" width="300px" height="400px" src="pic/8.png" alt="Card image cap">
+                            <div class="card-body">
+                                <p class="card-text">Some quick example text to build on the card title and make up the
+                                    bulk of the card's content.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="pricing-column col-lg-4 col-md-6">
+                        <div class="card" style="width: 18rem;">
+                            <img class="card-img-top n" width="300px" height="400px" src="pic/26.jpg" alt="Card image cap">
+                            <div class="card-body">
+                                <p class="card-text">Some quick example text to build on the card title and make up the
+                                    bulk of the card's content.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="pricing-column col-lg-4">
+                        <div class="card" style="width: 18rem;">
+                            <img class="card-img-top n" width="300px" height="400px" src="pic/12.jpg" alt="Card image cap">
+                            <div class="card-body">
+                                <p class="card-text">Some quick example text to build on the card title and make up the
+                                    bulk of the card's content.</p>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+            <div class="carousel-item active container-fluid">
+                <div class="row">
+
+                    <div class="pricing-column col-lg-4 col-md-6">
+                        <div class="card" style="width: 18rem;">
+                            <img class="card-img-top n" width="300px" height="400px" src="pic/13.jpg" alt="Card image cap">
+                            <div class="card-body">
+                                <p class="card-text">Some quick example text to build on the card title and make up the
+                                    bulk of the card's content.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="pricing-column col-lg-4 col-md-6">
+                        <div class="card" style="width: 18rem;">
+                            <img class="card-img-top n" width="300px" height="400px" src="pic/15.jpg" alt="Card image cap">
+                            <div class="card-body">
+                                <p class="card-text">Some quick example text to build on the card title and make up the
+                                    bulk of the card's content.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="pricing-column col-lg-4">
+                        <div class="card" style="width: 18rem;">
+                            <img class="card-img-top n" width="300px" height="400px" src="pic/14.jpg" alt="Card image cap">
+                            <div class="card-body">
+                                <p class="card-text">Some quick example text to build on the card title and make up the
+                                    bulk of the card's content.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <button class="carousel-control-prev " type="button"  data-bs-target="#hotstar" data-bs-slide="prev">
+            <span class="carbtn carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+          </button>
+          <button class="carousel-control-next " type="button" data-bs-target="#hotstar" data-bs-slide="next">
+            <span class="carbtn carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+          </button>
+    </div>
+</div>
+</section>
+<section>
+
+
+
+
+    <div id="prime" class="carousel slide hns" data-interval="false">
+        <div class="carousel-inner">
+            <div class="carousel-item container-fluid">
+                <div class="row">
+
+                    <div class="pricing-column col-lg-4 col-md-6">
+                        <div class="card" style="width: 18rem;">
+                            <img class="card-img-top n" width="300px" height="400px" src="pic/9.jpg" alt="Card image cap">
+                            <div class="card-body">
+                                <p class="card-text">Some quick example text to build on the card title and make up the
+                                    bulk of the card's content.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="pricing-column col-lg-4 col-md-6">
+                        <div class="card" style="width: 18rem;">
+                            <img class="card-img-top n" width="300px" height="400px" src="pic/16.jpg" alt="Card image cap">
+                            <div class="card-body">
+                                <p class="card-text">Some quick example text to build on the card title and make up the
+                                    bulk of the card's content.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="pricing-column col-lg-4">
+                        <div class="card" style="width: 18rem;">
+                            <img class="card-img-top n" width="300px" height="400px" src="pic/17.jpg" alt="Card image cap">
+                            <div class="card-body">
+                                <p class="card-text">Some quick example text to build on the card title and make up the
+                                    bulk of the card's content.</p>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+            <div class="carousel-item active container-fluid">
+                <div class="row">
+
+                    <div class="pricing-column col-lg-4 col-md-6">
+                        <div class="card" style="width: 18rem;">
+                            <img class="card-img-top n" width="300px" height="400px" src="pic/20.jpg" alt="Card image cap">
+                            <div class="card-body">
+                                <p class="card-text">Some quick example text to build on the card title and make up the
+                                    bulk of the card's content.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="pricing-column col-lg-4 col-md-6">
+                        <div class="card" style="width: 18rem;">
+                            <img class="card-img-top n" width="300px" height="400px" src="pic/19.jpg" alt="Card image cap">
+                            <div class="card-body">
+                                <p class="card-text">Some quick example text to build on the card title and make up the
+                                    bulk of the card's content.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="pricing-column col-lg-4">
+                        <div class="card" style="width: 18rem;">
+                            <img class="card-img-top n" width="300px" height="400px" src="pic/18.jpg" alt="Card image cap">
+                            <div class="card-body">
+                                <p class="card-text">Some quick example text to build on the card title and make up the
+                                    bulk of the card's content.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <button class="carousel-control-prev " type="button"  data-bs-target="#prime" data-bs-slide="prev">
+            <span class="carbtn carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+          </button>
+          <button class="carousel-control-next " type="button" data-bs-target="#prime" data-bs-slide="next">
+            <span class="carbtn carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+          </button>
+    </div>
+</div>
+</section>
+<section>
+
+
+
+
+
+    <div id="voot" class="carousel slide hns" data-interval="false">
+        <div class="carousel-inner">
+            <div class="carousel-item container-fluid">
+                <div class="row">
+
+                    <div class="pricing-column col-lg-4 col-md-6">
+                        <div class="card" style="width: 18rem;">
+                            <img class="card-img-top n" width="300px" height="400px" src="https://upload.wikimedia.org/wikipedia/en/2/21/Web_of_Spider-Man_Vol_1_129-1.png" alt="Card image cap">
+                            <div class="card-body">
+                                <p class="card-text">Some quick example text to build on the card title and make up the
+                                    bulk of the card's content.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="pricing-column col-lg-4 col-md-6">
+                        <div class="card" style="width: 18rem;">
+                            <img class="card-img-top n" width="300px" height="400px" src="pic/24.jpg" alt="Card image cap">
+                            <div class="card-body">
+                                <p class="card-text">Some quick example text to build on the card title and make up the
+                                    bulk of the card's content.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="pricing-column col-lg-4">
+                        <div class="card" style="width: 18rem;">
+                            <img class="card-img-top n" width="300px" height="400px" src="pic/24.png" alt="Card image cap">
+                            <div class="card-body">
+                                <p class="card-text">Some quick example text to build on the card title and make up the
+                                    bulk of the card's content.</p>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+            <div class="carousel-item active container-fluid">
+                <div class="row">
+
+                    <div class="pricing-column col-lg-4 col-md-6">
+                        <div class="card" style="width: 18rem;">
+                            <img class="card-img-top n" width="300px" height="400px" src="pic/23.jpg" alt="Card image cap">
+                            <div class="card-body">
+                                <p class="card-text">Some quick example text to build on the card title and make up the
+                                    bulk of the card's content.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="pricing-column col-lg-4 col-md-6">
+                        <div class="card" style="width: 18rem;">
+                            <img class="card-img-top n" width="300px" height="400px" src="pic/25.jpg" alt="Card image cap">
+                            <div class="card-body">
+                                <p class="card-text">Some quick example text to build on the card title and make up the
+                                    bulk of the card's content.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="pricing-column col-lg-4">
+                        <div class="card" style="width: 18rem;">
+                            <img class="card-img-top n" width="300px" height="400px" src="pic/21.jpg" alt="Card image cap">
+                            <div class="card-body">
+                                <p class="card-text">Some quick example text to build on the card title and make up the
+                                    bulk of the card's content.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <button class="carousel-control-prev " type="button" data-bs-target="#voot" data-bs-slide="prev">
+            <span class="carbtn carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+          </button>
+          <button class="carousel-control-next " type="button" data-bs-target="#voot" data-bs-slide="next">
+            <span class="carbtn carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+          </button>
+    </div>
+</div>
+</section>
+<section>
+      <span class="badge bg-light text-dark">From your watchlist</span>
+      <div id="carouselExampleControls" class="carousel slide" data-interval="false">
+        <div class="carousel-inner">
+            
+            <div class="carousel-item active container-fluid">
+                
+                <div class="row">
+                    {% for i in t %}
+                    <div class="pricing-column col-lg-4 col-md-6">
+                        <div class="card" style="width: 18rem;">
+                            <img class="card-img-top changeimage n" width="300px" height="400px" src="{{i.image}}" alt="Card image cap">
+                            <div class="card-body">
+                                <p class="card-text moviedes">{{i.name}}Some quick example text to build on the card title and make up the
+                                    bulk of the card's content.</p>
+                                    <form class="" action="/watchlist" method="post">
+                                     <input type="hidden" name="listName"  class="hid" value= "Stranger things"></input>
+                                      <a href="/addwatch/{{i.id}}" class="btn btn-primary wb" id="watchbtn1" value="https://i.pinimg.com/564x/4e/f7/ac/4ef7acad284e02a0243f29dd80f7d868.jpg" name="button">Watchlist <i class="fa fa-star" aria-hidden="true"></i></a>
+                                    </form>
+
+                            </div>
+                        </div>
+                    </div>
+                    {% endfor %}
+                </div>
+                   
+
+                    
+            </div>
+</section>
+
+
+<footer class="footer">
+    <div class="container">
+     <div class="row">
+       <div class="footer-col">
+         <h4>Sitesoch</h4>
+         <ul>
+           <li><a href="#">Home</a></li>
+           <li><a href="#">About</a></li>
+           <li><a href="#">Pricing</a></li>
+           <li><a href="#">Privacy Policy</a></li>
+         </ul>
+       </div>
+       <div class="footer-col">
+         <h4>Get Help</h4>
+         <ul>
+           <li><a href="#">Shipping</a></li>
+           <li><a href="#">Returns</a></li>
+           <li><a href="#">Order Status</a></li>
+           <li><a href="#">Payment Options</a></li>
+         </ul>
+       </div>
+       <div class="footer-col">
+         <h4>Address</h4>
+         <ul>
+           <li><a href="#">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Cupiditate adipisci quia ab omnis id ipsum quae inventore </a></li>
+         </ul>
+       </div>
+       <div class="footer-col">
+         <h4>follow us</h4>
+         <div class="social-links">
+           <a href="#"><i class="fa fa-google" aria-hidden="true"></i></a>
+           <a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a>
+           <a href="#"><i class="fa fa-instagram" aria-hidden="true"></i></a>
+           <a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a>
+         </div>
+       </div>
+     </div>
+    </div>
+ </footer>
+
+
+
+
+
+        <script src="public/alcher.js"></script>
+</body>
+
+</html>
